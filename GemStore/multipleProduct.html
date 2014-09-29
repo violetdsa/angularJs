@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="store">
+	<title>Html to Display Multiple Products</title>
+	<head>
+		<script type="text/javascript" src="../angular.min.js"></script>
+		<script type="text/javascript" src="controller.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	</head>
+	<body  ng-controller="MultiStoreController">
+	<ul class="list-group" >
+		<li class="list-group-item" ng-repeat="product in products">
+			<h3>
+				{{product.name}}
+				<em class="pull-right">{{product.price | currency}}</em><br>
+				<em class="pull-right">{{product.description}}</em>
+			</h3>
+		</li>
+	</ul>
+	</body>
+</html>
